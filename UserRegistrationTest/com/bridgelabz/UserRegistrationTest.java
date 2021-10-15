@@ -12,4 +12,16 @@ public class UserRegistrationTest {
         boolean result = validator.validateFirstName("Sunanda");
         assertTrue(result);
     }
+    @Test
+    public void givenLastName_WhenProper_ShouldReturnTure() {
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validateLastName("Shil");
+        assertTrue(result);
+    }
+    @Test
+    void givenEmailId_WhenProper_ShouldReturnTure() {
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validateEmailId("sunanda.shil@bl.co.in");
+        assertTrue(result);
+    }
 }
