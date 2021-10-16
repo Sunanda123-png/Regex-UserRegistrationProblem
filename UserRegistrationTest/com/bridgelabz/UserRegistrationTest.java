@@ -30,4 +30,10 @@ public class UserRegistrationTest {
         boolean result = validator.validateMobileNo("91 7578061886");
         assertTrue(result);
     }
+    @Test
+    public void givenPassword_WhenProper_ShouldReturnTure() {
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validatePassword("abcdefgh");
+        assertTrue(result);
+    }
 }
