@@ -21,7 +21,13 @@ public class UserRegistrationTest {
     @Test
     public void givenEmailId_WhenProper_ShouldReturnTure() {
         UserRegistration validator = new UserRegistration();
-        boolean result = validator.validateEmailId("sunandashil@bl.com");
+        boolean result = validator.validateEmailId("sunanda.shil@bl.co.in");
+        assertTrue(result);
+    }
+    @Test
+    public void givenEMailId_WhenProper_ShouldReturnTure() {
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validateEMailId("narendramodi@bl.com");
         assertTrue(result);
     }
     @Test
