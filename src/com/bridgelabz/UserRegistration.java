@@ -35,4 +35,5 @@ public class UserRegistration {
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
         return pattern.matcher(password).matches();
     }
+
 }

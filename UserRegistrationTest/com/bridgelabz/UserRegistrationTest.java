@@ -3,7 +3,7 @@ package com.bridgelabz;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class UserRegistrationTest {
     @Test
@@ -13,10 +13,22 @@ public class UserRegistrationTest {
         assertTrue(result);
     }
     @Test
+    public void givenFirstName_WhenProper_ShouldReturnTrueTest() {
+        UserRegistration validator = new UserRegistration();
+        Boolean result = validator.validateFirstName("sunanda");
+        assertEquals("Sad Test Case", false, result);
+    }
+    @Test
     public void givenLastName_WhenProper_ShouldReturnTure() {
         UserRegistration validator = new UserRegistration();
         boolean result = validator.validateLastName("Shil");
         assertTrue(result);
+    }
+    @Test
+    public void givenLastName_WhenProper_ShouldReturnTrueTest() {
+        UserRegistration validator = new UserRegistration();
+        Boolean result = validator.validateFirstName("8shil");
+        assertEquals("Sad Test Case", false, result);
     }
     @Test
     public void givenEmailId_WhenProper_ShouldReturnTure() {
@@ -37,9 +49,22 @@ public class UserRegistrationTest {
         assertTrue(result);
     }
     @Test
+    public void givenMobileNo_WhenProper_ShouldReturnTureTest() {
+        UserRegistration validator = new UserRegistration();
+        Boolean result = validator.validateFirstName("4567");
+        assertEquals("Sad Test Case", false, result);
+    }
+    @Test
     public void givenPassword_WhenProper_ShouldReturnTure() {
         UserRegistration validator = new UserRegistration();
         boolean result = validator.validatePassword("Abcdefgh1@");
         assertTrue(result);
     }
+    @Test
+    public void givenPassword_WhenProper_ShouldReturnTureTest() {
+        UserRegistration validator = new UserRegistration();
+        Boolean result = validator.validateFirstName("Wait");
+        assertEquals("Happy Test Case", true, result);
+    }
+
 }
